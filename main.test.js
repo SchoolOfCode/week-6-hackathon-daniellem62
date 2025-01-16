@@ -1,5 +1,5 @@
 import {test, expect, describe, beforeEach, vi} from "vitest"
-import {numberGuessGame, startGame} from "./main.js"
+import {startGame} from "./main.js"
 
 // Welcome to guess the number game! Your task is to create a guess the number game. It should:
 //MVP 1 COMPLETED
@@ -62,7 +62,7 @@ describe("Number Guess Game Tests", () => {
         expect(result).toBe("Too low!");
     });
 
-    test('should return "Please enter a number between 1 and 100" if the input is invalid', () => {
+    test('should return "Please enter a number between 1 and 100" if the input is out of range', () => {
         // Arrange
         const mockNumber = 50;  
         const guess = null;  
@@ -72,5 +72,29 @@ describe("Number Guess Game Tests", () => {
 
         // Assert
         expect(result).toBe("Please enter a number between 1 and 100");
+    });
+
+    test('should return "Way too low if guess is more than 20 less than number', () => {
+        // Arrange
+        const mockNumber = 50;  
+        const guess = 20;  
+
+        // Act
+        const result = startGame(guess, mockNumber);
+
+        // Assert
+        expect(result).toBe("Way too low");
+    });
+
+    test('should return "Way too high" if guess is more than 20 greater than number', () => {
+        // Arrange
+        const mockNumber = 50;  
+        const guess = 80;  
+
+        // Act
+        const result = startGame(guess, mockNumber);
+
+        // Assert
+        expect(result).toBe("Way too high");
     });
 });

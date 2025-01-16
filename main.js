@@ -33,15 +33,20 @@ export function startGame(guess, mockRandomNumber = null) {
     // The number guessing game logic
     function numberGuessGame(guess, randomNumber) {
         if (guess < 1 || guess > 100) { // THIS WILL BE DELETED FOR THE CHALLENGE
-            return "Please enter a number between 1 and 100" 
+            return "Please enter a number between 1 and 100" // THIS WILL BE DELETED FOR THE CHALLENGE
+        } else if (guess < randomNumber - 20) {// THIS WILL BE DELETED FOR THE CHALLENGE
+           return "Way too low" // THIS WILL BE DELETED FOR THE CHALLENGE
+        } else if (guess > randomNumber + 20) { // THIS WILL BE DELETED FOR THE CHALLENGE
+            return "Way too high"  // THIS WILL BE DELETED FOR THE CHALLENGE
         } else if (guess === randomNumber) { // THIS WILL BE DELETED FOR THE CHALLENGE
             return "You got it!"; // THIS WILL BE DELETED FOR THE CHALLENGE
+        } else if (guess < randomNumber + 10 && guess > randomNumber - 10) { // THIS WILL BE DELETED FOR THE CHALLENGE
+            return "Getting warmer!" // THIS WILL BE DELETED FOR THE CHALLENGE
         } else if (guess > randomNumber) { // THIS WILL BE DELETED FOR THE CHALLENGE
             return "Too high!"; // THIS WILL BE DELETED FOR THE CHALLENGE
         } else if (guess < randomNumber) { // THIS WILL BE DELETED FOR THE CHALLENGE
             return "Too low!"; // THIS WILL BE DELETED FOR THE CHALLENGE
         } // THIS WILL BE DELETED FOR THE CHALLENGE
-        
     }
 
     // Play the game by calling numberGuessGame with the guess
