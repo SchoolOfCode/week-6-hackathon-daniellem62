@@ -19,6 +19,11 @@ the logic that determines how close a guess is to the secret number. Decipher it
 Complete this trial by writing logic that handles all edge cases and passes the oracle's tests.
 ```
 
+# If you pass the Oracle's test, move on to Trial 2:
+```bash
+https://github.com/SchoolOfCode/week-6-hackathon-chargrace
+```
+
 # 🕹 Features
 
 ```bash
