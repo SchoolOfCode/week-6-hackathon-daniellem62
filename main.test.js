@@ -8,14 +8,13 @@ import {startGame} from "./main.js"
 // If the guess is correct, return "You got it!"
 // If the guess is higher than the number, return "Too high!"
 // if the guess is lower than the number, return "Too low!"
-//MVP2
+//MVP2 COMPLETED
 //Edge cases
 // if the input invalid, return "Please enter a number between 1 and 100"
 // if the input is not a number, return "Please enter a number between 1 and 100"
-//MVP3
+//MVP3 COMPLETED
 // if the guess is more than 20 higher than the number, return "Way too high"
 // if the guess is more than 20 lower than the number, return "Way too low"
-// if the guess is within 10 of the number, return "Close!"
 //MVP4
 // limit the number of guesses to 10
 // if the user runs out of guesses, return "You lose! The number was [number]"
@@ -65,7 +64,7 @@ describe("Number Guess Game Tests", () => {
     test('should return "Please enter a number between 1 and 100" if the input is out of range', () => {
         // Arrange
         const mockNumber = 50;  
-        const guess = null;  
+        const guess = 101;  
 
         // Act
         const result = startGame(guess, mockNumber);
@@ -73,6 +72,19 @@ describe("Number Guess Game Tests", () => {
         // Assert
         expect(result).toBe("Please enter a number between 1 and 100");
     });
+
+    test('should return "Please enter a number between 1 and 100" if the input is not a number', () => {
+        // Arrange
+        const mockNumber = 50;  
+        const guess = "string";  
+
+        // Act
+        const result = startGame(guess, mockNumber);
+
+        // Assert
+        expect(result).toBe("Please enter a number between 1 and 100");
+    });
+
 
     test('should return "Way too low if guess is more than 20 less than number', () => {
         // Arrange
