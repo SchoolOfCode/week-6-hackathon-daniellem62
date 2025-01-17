@@ -11,24 +11,13 @@ Each trial reveals a fragment of the key to your freedom. Good luck! */
 export function startGame(guess, mockRandomNumber = null) {
     const randomNumber = mockRandomNumber || Math.floor(Math.random() * 100) + 1;
 
-// THIS WILL BE DELETED FOR THE CHALLENGE
-    // The number guessing game logic
+
+    
     function numberGuessGame(guess, randomNumber) {
-        if (guess < 1 || guess > 100) { 
-            return "Please enter a number between 1 and 100" 
-        } else if (guess < randomNumber - 20) {
-           return "Way too low" 
-        } else if (guess > randomNumber + 20) { 
-            return "Way too high" 
-        } else if (guess === randomNumber) { 
-            return "You got it!"; 
-        } else if (guess > randomNumber) { 
-            return "Too high!"; 
-        } else if (guess < randomNumber) { 
-            return "Too low!"; 
-        } 
+    //YOUR CODE GOES HERE*************
+    
     }
-// THIS WILL BE DELETED FOR THE CHALLENGE
+
 
 
     return numberGuessGame(guess, randomNumber);
