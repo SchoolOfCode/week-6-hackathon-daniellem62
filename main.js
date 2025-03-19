@@ -25,18 +25,8 @@ PS. don't forget to npm install before starting and use npm run test to check yo
 
 
 
-export function startGame(guess, mockRandomNumber = null) {
-    const randomNumber = mockRandomNumber || Math.floor(Math.random() * 100) + 1;
-
-
-
-    function numberGuessGame(guess, randomNumber) {
-    //YOUR CODE GOES HERE*************
-    //YOUR CODE GOES HERE*************
-    //YOUR CODE GOES HERE*************
-    }
-
-
-
-    return numberGuessGame(guess, randomNumber);
+export function startGame(guess) {
+    //your code here
 }
+  
+  

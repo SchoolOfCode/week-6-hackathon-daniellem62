@@ -69,3 +69,4 @@ Node.js: The gateway to the Oracle's realm.
 This project was created for the Kata Hackathon with the aim of blending problem-solving, fun, and creativity. Inspired by the classic number-guessing game and enhanced with a touch of mystery.
 
 Outsmart the oracle, pass its trials, and escape the chamber. Your freedom awaits—if you’re clever enough to earn it.
+
